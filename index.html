@@ -15,37 +15,93 @@
   <body>
       <header class="primary-header">
         <div class="container">
-          <a href="#"><img src="\images\TheWebDesigner.devLogo.png" alt="Logo"></a>
-          <nav class="primary-navigation">
-            <ul aria-label="Primary" role="list" class="nav-list">
-              <li><a href=".">Home</a></li>
-              <li><a href="#">Our Work</a></li>
-              <li><a href="#"></a>About Us</li>
-              <li><a href="#"></a>Contact Us</li>
-            </ul>
-          </nav>
-          <button class="button"  onclick="window.location.href='#';">Get Started</button>
+          <div class="nav-wrapper">
+            <a href="#"><img class="hero-pic" src="\images\TheWebDesigner.devLogo.png" alt="Logo"></a>
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation">
+              <img class="icon-hamburger" src="images\hamburger-menu-svgrepo-com.svg" aria-hidden="true">
+              <img class="icon-close" src="images\icon-close.svg" aria-hidden="true">
+              <span class="visually-hidden">Menu</span>
+            </button>
+          
+            <nav class="primary-navigation" id="primary-navigation">
+              <ul aria-label="Primary" role="list" class="nav-list">
+                <li><a href="\index.html">Home</a></li>
+                <li><a href="\projects.html">Projects</a></li>
+                <li><a href="\about.html">About</a></li>
+                <li><a href="\contact.html">Contact</a></li>
+              </ul>
+            </nav>
+            <button class="button display-md-inline-flex display-sm-none" onclick="window.location.href='#';">Get Started</button>
+          </div>
         </div>
       </header>
 
       <main>
+        <div class="hero">
+          <img src="images\organized-workspace-small.jpg" alt="">
+        </div>
+        <section>
+          <h1>Web Design &<br> E-Commerce with Shopify</h1>
+          <div class="container">
+            <div class="even-columns">
+              <img class="home-page-img" src="images\Sparkler Light Bulb.jpg">  
+              <p>
+                Are you looking for a more personal experience with your web design company? 
+                Do you want your relationship with your web development company to have top notch communication?<br><br>
+                If so, this is the company for you. When you work with TheWebDesigner.dev, you will speak and work directly with the owner, Brent.<br><br>
+                We believe communication is extremely important and during our first conversation, we will make sure we are a good fit.
+              </p>
+            </div>
+          </div>
+        </section>
         <section>
           <div class="container">
             <div class="even-columns">
-              <div>
-                <h1 class="fs-primary-heading fw-bold">It's All In The Design</h1>
-              </div>
+              <p class="verticle-center">
+                When we first meet, we will go over your ideas and Brent's suggestions. 
+                Together we will collaborate and workout a design that meets your store's needs.<br><br>
+                Here is an example of my work.
+              </p>
+              <img class="home-page-img" src="images\Galaxy 1920X1280.png">
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="container">
+            <div class="even-columns">
+              <img class="home-page-img verticle-center height-500" src="images\hand-shake-on-teal.png">
+              <dev class="form-text verticle-center"> 
+              <p class="verticle-center font-size-550">
+                  Ready to learn more? Complete the form and Brent will reach out to you.<br><br>
+                  If you like, you can also email Brent directly at brent@TheWebDesigner.dev<br>
+                  or call Brent at 405-816-3600<br><br>
+                </p>
+                <form class="vertical-form" action="https://submit-form.com/PI2CZZkq">
+                  <label class="required" for="name">Name</label>
+                  <input type="text" id="name" name="name" placeholder="Name" required="" />
+                  <label class="required" for="email">Email</label>
+                  <input type="email" id="email" name="email" placeholder="Email" required="" />
+                  <label for="message">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Message"
+                    required=""
+                  ></textarea>
+                  <button class="button width-120 top-margin-20" type="submit">Send</button>
+                </form>
+                </dev>
             </div>
           </div>
         </section>
       </main>
       <footer>
-          <nav class="footer-nav">
+          <nav class="footer-nav container">
             <ul aria-label="Footer" role="list">
               <li><a href=".">Home</a></li>
-              <li><a href="#">Our Work</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <li><a href="our-work.html">Our Work</a></li>
+              <li><a href="about-us.html">About Us</a></li>
+              <li><a href="\contact-us.html">Contact Us</a></li>
             </ul>
           </nav>
       </footer>
