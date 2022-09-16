@@ -14,16 +14,16 @@
 </head>
 <body>
   <header class="primary-header">
-    <div class="container">
+    <div>
       <div class="nav-wrapper">
         <a href="\index.html"><img class="hero-pic" src="images\Logo images\1 - TheWebDesigner.devLogo.png" alt="Logo"></a>
         <button class="mobile-nav-toggle" aria-controls="primary-navigation">
-          <img class="icon-hamburger" src="images\hamburger-menu-svgrepo-com.svg" aria-hidden="true">
+          <img class="icon-hamburger" aria-hidden="true">
           <img class="icon-close" src="images\icon-close.svg" aria-hidden="true">
           <span class="visually-hidden">Menu</span>
         </button>
 
-        <nav class="primary-navigation" id="primary-navigation">
+        <nav class="primary-navigation z-1" id="primary-navigation">
           <ul aria-label="Primary" role="list" class="nav-list">
             <li><a href="\index.html">Home</a></li>
             <li><a href="\projects.html">Projects</a></li>
@@ -31,25 +31,25 @@
             <li><a href="\contact.html">Contact</a></li>
           </ul>
         </nav>
-        <button class="button display-md-inline-flex display-sm-none" onclick="window.location.href='#email-form';">Get Started</button>
+        <button class="button display-md-inline-flex" onclick="window.location.href='#email-form';">Get Started</button>
       </div>
     </div>
   </header>
 
   <main>
     <div>
-      <h1>It's All In The Design</h1>
-      <img class="hero" src="images\organized-workspace-small.png" alt="TheWebDesigner.dev Slogan, It's All In The Design">
+      <h1 class="stagger1">It's All In The Design</h1>
+      <img class="hero moving-img" src="images\organized-workspace-small.png" alt="TheWebDesigner.dev Slogan, It's All In The Design">
     </div>
-    <section>
-      <h1>Web Design &<br> E-Commerce with Shopify</h1>
-      <div class="margin-b-10 margin-25 even-columns">
+    <section class="margin-rl-25">
+      <h1 class="stagger1">Web Design & E-Commerce with Shopify</h1>
+      <div class="margin-b-10 margin-tb-25 even-columns">
         <div class="even-columns">
           <div>
-            <img class="img-40perc" src="images\Sparkler Light Bulb.jpg" alt="Turning Ideas Into $">
+            <img class="img-40perc moving-img" loading="lazy" src="images\Sparkler Light Bulb.jpg" alt="Turning Ideas Into $">
           </div>
           <div>
-            <h2>Turning Ideas Into $</h2>
+            <h2 class="stagger1">Turning Ideas<br>Into Dollars</h2>
             <p>
               Are you looking for a more personal experience with your web design company?
               Do you want your relationship with your web development company to have top notch communication?<br><br>
@@ -62,8 +62,8 @@
     </section>
     <section>
       <div class="section-bg-n-100 even-columns padding-30">
-        <div class="padding-15 vertical-center max-width-40">
-          <h2 class="fs-700">TheWebDesigner.dev Process</h2>
+        <div class="vertical-center max-width-40">
+          <h2 class="fs-550 stagger1">TheWebDesigner.dev Process</h2>
           <p>
             When we first meet, we will go over your ideas and Brent's suggestions.
             Together we will collaborate and workout a design that meets your store's needs.<br><br>
@@ -71,16 +71,44 @@
           </p>
         </div>
         <div>
-          <img class="img-40perc margin-b-10" src="images\Galaxy 1920X1280.png" alt="Sample store page by TheWebDesigner.dev">
+          <img class="img-40perc margin-b-10 moving-img" loading="lazy" src="images\Galaxy 1920X1280.png" alt="Sample store page by TheWebDesigner.dev">
         </div>
       </div>
     </section>
     <section>
+      <div class="even-columns padding-30">
+        <img class="img-40perc moving-img" loading="lazy" src="images\Themes.png" width="482px" height="379px">
+        <div class="vertical-center max-width-40 margin-rl30">
+          <h2 class="fs-900 stagger1">Shopify Themes You Are Looking For</h2>
+          <p>
+              Whether you are just starting your store and website or you have an existing store you need to look and perform better, we can help. We will setup your store with a design that will help maximize your sales. We will work with you and design your store as you need. We will go over your options and setup your store to maximize your profits.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="even-columns padding-30 section-bg-n-100">
+        <div class="padding-15 vertical-center max-width-40">
+          <h2 class="fs-700 stagger1">The Features Your Store Needs</h2>
+          <p>
+            We offer many custom services, so if you don't see the work you need, reach out to Brent and see how he can help you. <br><br>Here are some of the services we provide:
+          </p>
+          <ul>
+            <li>Shopify Theme Updates and Changes</li>
+            <li>Shopify New Store Setup</li>
+            <li>Website Design and Setup</li>
+            <li>Fix problems you are currently having with your website</li>
+          </ul>
+        </div>
+        <img class="img-40perc moving-img" loading="lazy" src="images\Collections and MegaMenu.png" width="1000px" height="688px">
+      </div>
+    </section>
+    <section class="margin-tb-25">
       <div class="container">
-        <div class="even-columns">
-          <img class="img-40perc margin-b-10" src="images\hand-shake-on-teal.png">
-          <dev class="form-text verticle-center">
-            <p class="verticle-center font-size-550">
+        <div class="even-columns padding-30">
+          <img class="img-40perc moving-img" loading="lazy" src="images\hand-shake-on-teal.png">
+          <dev class="vertical-center">
+            <p class="max-width-80p fs-500">
               Ready to learn more? Complete the form and Brent will reach out to you.<br><br>
               If you like, you can also email Brent directly at brent@TheWebDesigner.dev
               or call Brent at 405-816-3600<br><br>
@@ -97,7 +125,7 @@
                 name="message"
                 placeholder="Message"
                 ></textarea>
-              <button class="button width-170" type="\submit">Contact-Us</button>
+              <button class="button width-211-center margin-t-15" type="\submit">Contact-Us</button>
             </form>
           </dev>
         </div>
@@ -108,7 +136,7 @@
     <nav class="footer-nav container">
       <div class="footer-layout">  
       <div>
-        <img src="images\Logo images\1 - TheWebDesigner.devLogo.png" alt="Company Logo">
+        <img class="hero-pic" src="images\Logo images\1 - TheWebDesigner.devLogo.png" loading="lazy" alt="Company Logo">
         <h3 class="font-size-550 padding-30">Copywrite: 2022</h3>
       </div>
       <ul aria-label="Footer" role="list"  class="nav-list">
@@ -120,11 +148,30 @@
         </div>
     </nav>
   </footer>
-  <script type="module" src="/main.js"></script>
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js" integrity="sha512-wK2NuxEyN/6s53M8G7c6cRUXvkeV8Uh5duYS06pAdLq4ukc72errSIyyGQGYtzWEzvVGzGSWg8l79e0VkTJYPw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  <script></script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+    var tl = gsap.timeline();
+
+    tl.from('.moving-img' , {
+      y: '-30%',
+      opacity: 0,
+      duration: 2,
+      ease: Power4.easeOut
+    })
+    tl.from('.stagger1' , {
+      opacity: 0,
+      y: -50,
+      stagger: .3,
+      ease: Power4.easeOut,
+      duration: 2
+    },"-=1.5" )
+  </script>
+
+<script type="module" src="/main.js"></script>
 </body>
 </html>
