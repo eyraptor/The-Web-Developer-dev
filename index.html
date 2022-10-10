@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css\style.css">
   <link rel="icon" href="images\Logo images\1 - TheWebDeveloper.devLogo.png">
-  <script src="/main.js" type="module"></script>
+  
 </head>
 <body>
   <!-- <div class="scroll-tracker"></div> -->
@@ -31,28 +31,34 @@
             <li><a href="\index.html">Home</a></li>
             <li><a href="\projects.html">Projects</a></li>
             <li><a href="\about.html">About</a></li>
+            <li><a href="\blog.html">Blog</a></li>
             <li><a href="\contact.html">Contact</a></li>
           </ul>
         </nav>
-        <button class="button display-md-inline-flex" onclick="window.location.href='#email-form';">Get Started</button>
+        <button class="button display-md-inline-flex button-hide" onclick="window.location.href='#name';">Get Started</button>
       </div>
     </div>
   </header>
 
   <main>
-    <div>
-      <img class="hero stagger1" src="images\organized-workspace-small.png" alt="TheWebDeveloper.dev Slogan, It's All In The Design">
+    
+    <div class="rel-position">
+      <div class="img-overlay2">
+        <img class="hero stagger1" src="images\organized-workspace-small.png" alt="TheWebDeveloper.dev Slogan, It's All In The Design">
+      </div>
     </div>
-    <section class="margin-rl-25 gray-shadow-right margin-b-30">
-      <h1 class="stagger1 fs-600 padding-15">Web Development & E-Commerce with Shopify</h1>
+      <div class="rel-position">
+        <button class="button3" onclick="window.location.href='#name';">Get Started</button>
+    </div>
+      <section class="gray-shadow-right padding-tb">
       <div class="margin-b-10 margin-tb-25 even-columns">
         <div class="even-columns">
-          <div>
-            <img class="img-40perc" src="images\Sparkler Light Bulb.jpg" alt="Turning Ideas Into $">
+          <div class="h-center">
+            <iframe class="flex-h-align max-width-90p" width="560" height="315" src="https://www.youtube.com/embed/vDBkL7H4nHw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div>
-            <h2 class="box right fs-550">Turning Ideas Into Dollars</h2>
-            <p class="padding-30">
+            <h2 class="margin-t-15 fs-550 margin-rl-25 ">Turning Ideas Into Dollars</h2>
+            <p class="margin-rl-25">
               Are you looking for a more personal experience with your web development company?
               Do you want your relationship with your web development company to have top notch communication?<br><br>
               If so, this is the company for you. When you work with TheWebDeveloper.dev, you will speak and work directly with the owner, Brent.<br><br>
@@ -62,7 +68,7 @@
         </div>
       </div>
     </section>
-    <section class="gray-shadow-left margin-b-30">
+    <section class="gray-shadow-left margin-tb-25">
       <div class="section-bg-n-100 even-columns padding-30">
         <div class="vertical-center max-width-40">
           <h2 class="fs-550 box2 left">TheWebDeveloper.dev Process</h2>
@@ -73,14 +79,14 @@
           </p>
         </div>
         <div>
-          <img class="img-40perc margin-b-10 box2 righti" loading="lazy" src="images\Galaxy 1920X1280.png" alt="Sample store page by TheWebDeveloper.dev">
+          <img class="max-width-70 center-align box2 righti" loading="lazy" src="images\Galaxy 1920X1280.png" alt="Sample store page by TheWebDeveloper.dev">
           <!-- <img class="img-40perc margin-b-10 moving-img image-rotate-in" loading="lazy" src="images\Galaxy 1920X1280.png" alt="Sample store page by TheWebDeveloper.dev"> -->
         </div>
       </div>
     </section>
     <section class=" gray-shadow-right margin-b-30">
       <div class="even-columns padding-30">
-        <img class="img-40perc box2 righti" loading="lazy" src="images\Themes.png" width="482px" height="379px">
+        <img class="max-width-70 center-align box2 righti" loading="lazy" src="images\Themes.png" width="482px" height="379px">
         <div class="vertical-center max-width-40 margin-rl30">
           <h2 class="fs-550 box2 left">Shopify Themes You Are Looking For</h2>
           <p>
@@ -103,15 +109,15 @@
             <li>Fix problems you are currently having with your website</li>
           </ul>
         </div>
-        <img class="img-40perc box2 righti" loading="lazy" src="images\Collections and MegaMenu.png" width="1000px" height="688px">
+        <img class="max-width-70 box2 righti" loading="lazy" src="images\Collections and MegaMenu.png" width="1000px" height="688px">
       </div>
     </section>
     <section class="margin-tb-25 gray-shadow-right">
       <div class="container">
         <div class="even-columns padding-30">
-          <img class="img-40perc box" loading="lazy" src="images\hand-shake-on-teal.png">
+          <img class="max-width-70 box" loading="lazy" src="images\hand-shake-on-teal.png">
           <dev class="vertical-center">
-            <p class="max-width-80p fs-500">
+            <p class="max-width-70 fs-500">
               Ready to learn more? Complete the form and Brent will reach out to you.<br><br>
               If you like, you can also email Brent directly at brent@TheWebDeveloper.dev
               or call Brent at 405-816-3600<br><br>
@@ -146,34 +152,17 @@
         <li><a href="\index.html">Home</a></li>
         <li><a href="\projects.html">Our Work</a></li>
         <li><a href="\about.html">About Us</a></li>
-        <li><a href="\contact.html">Contact Us</a></li>
+        <li><a href="\blog.html">Blog</a></li>
+        <li><a href="\contact.html">Contact</a></li>
       </ul>
         </div>
     </nav>
   </footer>
 
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js" integrity="sha512-wK2NuxEyN/6s53M8G7c6cRUXvkeV8Uh5duYS06pAdLq4ukc72errSIyyGQGYtzWEzvVGzGSWg8l79e0VkTJYPw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!-- <script>
-    gsap.registerPlugin(ScrollTrigger);
-    var tl = gsap.timeline();
-
-    tl.from('.moving-img' , {
-      y: '-30%',
-      opacity: 0,
-      duration: 2,
-      ease: Power4.easeOut
-    })
-    tl.from('.stagger1' , {
-      opacity: 0,
-      y: -50,
-      stagger: .3,
-      ease: Power4.easeOut,
-      duration: 2
-    },"-=1.5" )
-  </script> -->
+<script src="/main.js" type="module"></script>
 
 </body>
 </html>

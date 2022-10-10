@@ -1,0 +1,54 @@
+:root {
+  font-size: 62.5%;
+  
+--footer-height: 100px;
+--header-height: 60px;
+--sides-width: 100px;
+}
+
+body {
+  font-size: 1.6rem;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1 {
+  text-align: center;
+}
+
+.header {
+  height: var(--header-height);
+  background-color: orange;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+.nav, .aside {
+  width: var(--sides-width);
+  flex-shrink: 0;
+}
+.nav {
+  background-color: rgb(255, 196, 0);
+}
+
+.aside {
+  background-color: rgb(255, 217, 0);
+}
+
+.main {
+  background-color: antiquewhite;
+  flex-grow: 1;
+}
+
+.footer {
+  background-color: gray;
+  height: var(--footer-height);
+}

@@ -1,3 +1,5 @@
+// Mobile Navigation top of pages
+
 const primaryHeader = document.querySelector(".primary-header");
 const navToggle = document.querySelector(".mobile-nav-toggle");
 const primaryNav = document.querySelector(".primary-navigation");
@@ -9,6 +11,8 @@ navToggle.addEventListener("click", () => {
   primaryNav.toggleAttribute("data-visible");
   primaryHeader.toggleAttribute("data-overlay");
 });
+
+// Project page cards with hover affect
 
 const boxes = document.querySelectorAll('.box')
 window.addEventListener('scroll', checkBoxes)
@@ -26,6 +30,7 @@ window.addEventListener('scroll', checkBoxes)
         })
     }
 
+    // Move boxes up
     const boxes2 = document.querySelectorAll('.box2')
     window.addEventListener('scroll', checkBoxes2)
         checkBoxes2()
@@ -42,6 +47,7 @@ window.addEventListener('scroll', checkBoxes)
             })
         }
 
+        //  Scroll trigger for moving boxes
     gsap.registerPlugin(ScrollTrigger);
     var tl = gsap.timeline();
 
