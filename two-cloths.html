@@ -18,7 +18,7 @@
   <header class="primary-header">
     <div>
       <div class="nav-wrapper">
-        <a href="\index.html"><img class="hero-pic" loading="lazy" src="images\Logo images\1 - TheWebDeveloper.devLogo.png" alt="Logo" width="357" height="100"></a>
+        <a href="\index.html"><img class="hero-pic" width="357px" height="100px" loading="lazy" src="images\Logo images\1 - TheWebDeveloper.devLogo.png" alt="Logo"></a>
         <button class="mobile-nav-toggle" aria-controls="primary-navigation">
           <img class="icon-hamburger" aria-hidden="true">
           <img class="icon-close" loading="lazy" src="images\icon-close.svg" aria-hidden="true">
@@ -55,19 +55,20 @@
               </ul>
           </div>
           <div class="h-center">
-            <img class="max-width-70 box2 righti" loading="lazy" src="images\Mobile-Images\iMac-Womans-page-with-avail-sizes.png" alt="Sample store page by TheWebDeveloper.dev">
+            <img class="max-width-70 box2 righti" loading="lazy" width="1000px" height="831px" src="images\Mobile-Images\iMac-Womans-page-with-avail-sizes.webp" alt="Sample store page by TheWebDeveloper.dev">
           </div>
         </div>
       </section>
       <section class="gray-shadow-left margin-b-30">
         <div class="even-columns padding-30">
-          <div class="h-center">
-            <iframe class="max-width-80p" width="560" height="315" src="https://www.youtube.com/embed/EYb6yEqHkQQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div id="placeholder" class="h-center">
+            <img class="flex-h-align max-width-90p-h-auto" width="550px" height="401.5px" src="images\YouTube-Splash-Screen.webp" />
           </div>
+          <div id="player" class="hidden-div max-width-90p"></div>
           <div class="vertical-center max-width-40">
             <h2 class="fs-550 box2 left">Two Cloths Shopify Store</h2>
             <p>
-              Checkout this video to learn more about how I created this store and its features.
+              In this video I will show you features of a shopify Clothing Store I created. I will go over Shopify Themes, features like Mega Menus and custom programming for your store.
             </p>
           </div>
         </div>
@@ -75,12 +76,12 @@
       <section>
         <div class="container section-bg-n-100">
           <div class="even-columns padding-30 ">
-            <img class="max-width-70 box" loading="lazy" src="images\hand-shake-on-teal.png" width="3960px" height="2640">
+            <img class="max-width-70 box" loading="lazy" src="images\hand-shake-on-teal.webp" width="1500px" height="1000px">
             <div>
               <p class="fs-500 max-width-80p">
                 Ready to learn more? Complete the form and Brent will reach out to you.<br><br>
-                If you like, you can also email Brent directly at brent@TheWebDeveloper.dev<br>
-                or call Brent at 405-816-3600<br><br>
+                If you like, you can also email Brent directly at <a href="mailto:brent@TheWebDeveloper.dev">brent@TheWebDeveloper.dev</a><br>
+                or call Brent at <a href="tel:4058163600">405-816-3600</a><br><br>
               </p>
               <form class="vertical-form" id="email-form" action="https://submit-form.com/PI2CZZkq">
                 <input type="hidden" name="_redirect" value="http://thewebdeveloper.dev/thank-you.html" />
@@ -94,7 +95,7 @@
                   name="message"
                   placeholder="Message"
                   ></textarea>
-                <button class="button width-211-center margin-t-15" type="\submit">Contact-Us</button>
+                <button class="button width-211-center margin-t-15" type="\submit">Contact Me</button>
               </form>
             </div>
           </div>
@@ -105,12 +106,12 @@
       <nav class="footer-nav container">
         <div class="footer-layout">  
         <div>
-          <img class="hero-pic" src="images\Logo images\1 - TheWebDeveloper.devLogo.png" loading="lazy" alt="Company Logo" width="357" height="100">
+          <img class="hero-pic" width="357px" height="100px" src="images\Logo images\1 - TheWebDeveloper.devLogo.png" loading="lazy" alt="Company Logo">
           <h3 class="font-size-550 padding-30">Copywrite: 2022</h3>
         </div>
         <ul aria-label="Footer" role="list"  class="nav-list">
           <li><a href="\index.html">Home</a></li>
-          <li><a href="projects.html">Our Work</a></li>
+          <li><a href="projects.html">Projects</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="\blog.html">Blog</a></li>
           <li><a href="\contact.html">Contact</a></li>
@@ -125,6 +126,62 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js" integrity="sha512-wK2NuxEyN/6s53M8G7c6cRUXvkeV8Uh5duYS06pAdLq4ukc72errSIyyGQGYtzWEzvVGzGSWg8l79e0VkTJYPw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   
     <script src="/main.js" type="module"></script>
+
+    <!-- Allows to have a picture in place of YouTube video to save on load times -->
+<script>
+  
+  document.getElementById("placeholder").addEventListener("click", function(){
+      this.style.display = 'none';
+      var x = document.getElementById("player");
+      x.style.display = "block";
+      loadYT()
+  });
+  
+    // 2. This code loads the IFrame Player API code asynchronously.
+    function loadYT() {
+      var tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    }
+  
+    // 3. This function creates an <iframe> (and YouTube player)
+    //    after the API code downloads.
+    var player;
+  
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        height: '401.5',
+        width: '550',
+        videoId: 'M8dkwxHO6fM',
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+      });
+    }
+  
+    // 4. The API will call this function when the video player is ready.
+    function onPlayerReady(event) {
+      event.target.playVideo();
+    }
+  
+    // 5. The API calls this function when the player's state changes.
+    //    The function indicates that when playing a video (state=1),
+    //    the player should play for six seconds and then stop.
+    var done = false;
+  
+    function onPlayerStateChange(event) {
+      if (event.data == YT.PlayerState.PLAYING && !done) {
+        // setTimeout(stopVideo, 6000);
+        done = true;
+      }
+    }
+  
+    function stopVideo() {
+      player.stopVideo();
+    }
+  </script>
     
   </body>
   </html>

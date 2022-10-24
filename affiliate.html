@@ -39,10 +39,27 @@
     </div>
   </header>
     <main>
-      <div class="even-columns">
+      <section class="gray-shadow-right padding-tb">
+        <div class="margin-b-10 margin-tb-25 even-columns">
+          <div class="even-columns">
+            <div id="placeholder" class="h-center">
+              <img class="flex-h-align max-width-90p-h-auto" width="550px" height="401.5px" src="images\YouTube-Splash-Screen.webp" />
+            </div>
+            <div id="player" class="hidden-div max-width-90p"></div>
+            <div>
+              <h2 class="margin-t-15 fs-550 margin-rl-25 ">Customizing your Website or Shopify Store</h2>
+              <p class="margin-rl-25">
+                Themes are great and they can save you a bunch of money choosing a theme and then having me custom code features for your website or Shopify Store. In this video I go over what I did for a site to give it a feature that allows them to direct their shoppers to an affiliate website.
+              </p>
+              <!-- <button class="button margin-rl-25 margin-t-15" onclick="window.location.href='/about.html';">Learn More About Brent</button> -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- <div class="even-columns">
         <iframe class="margin-b-10 max-width-80p" width="560" height="315" src="https://www.youtube.com/embed/LY5iBKvCUlw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <img class="max-width-80p margin-b-10" loading="lazy" src="images\Mobile-Images\DellXPS-Shopify-Code.png" alt="Sample store page by TheWebDeveloper.dev">
-      </div>
+      </div> -->
       <section class="gray-shadow-left margin-b-30">
         <div class="section-bg-n-100 even-columns padding-30">
           <div class="vertical-center max-width-40">
@@ -71,8 +88,8 @@
             <div>
               <p class="fs-500 max-width-80p">
                 Ready to learn more? Complete the form and Brent will reach out to you.<br><br>
-                If you like, you can also email Brent directly at brent@TheWebDeveloper.dev<br>
-                or call Brent at 405-816-3600<br><br>
+                If you like, you can also email Brent directly at <a href="mailto:brent@TheWebDeveloper.dev">brent@TheWebDeveloper.dev</a><br>
+                or call Brent at <a href="tel:4058163600">405-816-3600</a><br><br>
               </p>
               <form class="vertical-form" id="email-form" action="https://submit-form.com/PI2CZZkq">
                 <input type="hidden" name="_redirect" value="http://thewebdeveloper.dev/thank-you.html" />
@@ -86,7 +103,7 @@
                   name="message"
                   placeholder="Message"
                   ></textarea>
-                <button class="button width-211-center margin-t-15" type="\submit">Contact-Us</button>
+                <button class="button width-211-center margin-t-15" type="\submit">Contact Me</button>
               </form>
             </div>
           </div>
@@ -117,6 +134,62 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js" integrity="sha512-wK2NuxEyN/6s53M8G7c6cRUXvkeV8Uh5duYS06pAdLq4ukc72errSIyyGQGYtzWEzvVGzGSWg8l79e0VkTJYPw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   
     <script src="/main.js" type="module"></script>
+
+<!-- Allows to have a picture in place of YouTube video to save on load times -->
+<script>
+  
+  document.getElementById("placeholder").addEventListener("click", function(){
+      this.style.display = 'none';
+      var x = document.getElementById("player");
+      x.style.display = "block";
+      loadYT()
+  });
+  
+    // 2. This code loads the IFrame Player API code asynchronously.
+    function loadYT() {
+      var tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    }
+  
+    // 3. This function creates an <iframe> (and YouTube player)
+    //    after the API code downloads.
+    var player;
+  
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        height: '401.5',
+        width: '550',
+        videoId: '-wvyk_IV-f0',
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+      });
+    }
+  
+    // 4. The API will call this function when the video player is ready.
+    function onPlayerReady(event) {
+      event.target.playVideo();
+    }
+  
+    // 5. The API calls this function when the player's state changes.
+    //    The function indicates that when playing a video (state=1),
+    //    the player should play for six seconds and then stop.
+    var done = false;
+  
+    function onPlayerStateChange(event) {
+      if (event.data == YT.PlayerState.PLAYING && !done) {
+        // setTimeout(stopVideo, 6000);
+        done = true;
+      }
+    }
+  
+    function stopVideo() {
+      player.stopVideo();
+    }
+  </script>
     
   </body>
   </html>
