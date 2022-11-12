@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../Deep-Blues-Siral-Galaxy"
+		},
+		{
+			"path": "../starterclothsstore"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Deep-Blues-Siral-Galaxy"
+	}
+}
