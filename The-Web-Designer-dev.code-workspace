@@ -8,9 +8,22 @@
 		},
 		{
 			"path": "../starterclothsstore"
+		},
+		{
+			"path": "C:/Users/volfr/Documents/GitHub/Freemote-Blog"
 		}
 	],
 	"settings": {
 		"liveServer.settings.multiRootWorkspaceName": "Deep-Blues-Siral-Galaxy"
+	},
+	"launch": {
+		"configurations": [
+			{
+				"type": "chrome",
+				"name": "http://127.0.0.1:3002/index.html",
+				"request": "launch",
+				"url": "http://127.0.0.1:3002/index.html"
+			}
+		]
 	}
 }
