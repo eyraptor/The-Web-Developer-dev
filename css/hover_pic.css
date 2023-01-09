@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+h1 {
+  border: 1px solid black;
+}
+
+.div-class {
+  display:block;
+  width: 300px;
+  height: 300px;
+  border: 1 solid black;
+  background-image:url('/images/360-X-360-Platinum.jpg');
+  background-size: contain;
+  transition: all 500ms ease-in-out;
+}
+
+div:hover {
+  background-image: url('/images/Brent and Edna small old.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+}
+
+
+                    .nw {
+                      display:block;
+                      border: 1 solid black;
+                      background-size: contain;
+                      transition: all 500ms ease-in-out;
+                    }

@@ -764,7 +764,7 @@ label.required:after {
   width: calc(100% + var(--padding));
   background-color: var(--clr-pop-100);
   transform-origin: left;
-  transition: transform 900ms ease;;
+  transition: transform 900ms ease;
 }
 
 .card:hover .card-title::after,
