@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Should Adam go to the meeting</title>
+  <link rel="stylesheet" href="goOrNoGo.css">
+</head>
+<body>
+  <div class="outerContainer2">
+    <h1 class="canHe" >Can Adam Make it to the meeting?</h1>
+    <!-- <form> -->
+      <!-- <label class="howManyLabel" for="textbox">How many drinks will you have on July 4th?<br></label> -->
+      <input type="text" id="textbox" onkeyup="getTextboxValue(event)">
+      <button class="howManyButton" onclick="getTextboxValue()">Can you go?</button>
+    <!-- </form> -->
+    <h3 id="yesOrNo">How many did you really drink?</h3>
+    <script>
+      window.onload = function() {
+        document.getElementById("textbox").focus();
+      };
+
+      function getTextboxValue(event) {
+        const input = document.querySelector("#textbox");
+        const h1 = document.querySelector("#yesOrNo");
+
+        if (event && event.keyCode === 13 || !event) {
+          Number(input.value);
+          if (input.value === '') {
+            h1.innerText = 'Please enter a number';
+          }else if (input.value > 5) {
+            h1.innerText = "No, you may be feeling pretty bad";
+          } else {
+            h1.innerText = 'Yes, you should be good for our meeting';
+          }
+        }
+      }
+
+      // Not working correctly
+      // function getTextboxValue(event) {
+      //   // const input = document.querySelector("#textbox");
+      //   const input = document.getElementById("textbox").value;
+      //   const h1 = document.querySelector("#yesOrNo");
+
+      //   if (event && event.keyCode === 13 || !event) {
+      //     if (input >= "5") {
+      //       console.log(input);
+      //       h1.innerText = "No, you may be feeling pretty bad";
+      //     } else {
+      //       h1.innerText = 'Yes, you should be good for our meeting';
+      //     }
+      //   }
+      // }
+
+      
+      // This is the code that is supposed to enter whether you go or not depending on the answer in the textbox
+      // function getTextboxValue(event) {
+      //   const getTextboxValue = document.getElementById("textbox").value;
+      //   if (getTextboxValue >= 5){
+      //   document.getElementById('yesOrNo').innerHTML = 'No, you may be feeling pretty bad';
+      //   } else if (getTextboxValue < 5){
+      //     document.getElementById('yesOrNo').innerHTML = 'Yes, you should be good for our meeting';
+      //   }}
+    </script>
+  </div>
+</body>
+</html>

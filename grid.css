@@ -70,6 +70,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  ;
 }
 
 /* A elements that don't have a class get default styles */
@@ -126,6 +127,19 @@ h3 {
 }
 
 /* utilities */
+img {
+  width: 50px;
+  height: 50px;
+}
+
+h3 {
+  text-align: center;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
 .flex {
   display: flex;
   gap: var(--gap, 1rem);
@@ -157,10 +171,41 @@ h3 {
 }
 .border-primary-400 {
   border: 2px solid #a775f1;
-
+}
   /* components */
   .testimonial-grid {
     display: grid;
     gap: 1.5rem;
+    grid-template-areas: ;
+    
+    padding-block: 2rem;
+    width: min(95%, 70rem);
+    margin-inline: auto;
+  }
+  
+  .testimonial {
+    font-size: var(--fs-400);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 2.5rem 3.75 3rem hsl(var(--clr-secondary-400) / 0.25);
+  }
+
+@media (min-width: 60em) {
+  /* .grid-col-span-2 {
+    grid-column: span 2;
+  }
+
+  .testimonial-grid {
     grid-template-columns: repeat(4, 1fr);
   }
+
+  .testimonial:last-child {
+    grid-column: 4;
+    /* Can do it the way below or the following way */
+    /* grid-row-start: 1;
+    grid-row-end: 3; */
+    grid-row: 1 / span 2;
+  } */
+}
+
+  
