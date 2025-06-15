@@ -1,0 +1,156 @@
+:root {
+    --primary-color: #007bff; /* A nice blue, reminiscent of solid business */
+    --secondary-color: #28a745; /* Green for growth and freshness */
+    --background-light: #f8f9fa;
+    --text-dark: #343a40;
+    --card-background: #ffffff;
+    --border-color: #dee2e6;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #e0f2f7, #c1e7f0); /* Soft gradient background */
+    margin: 0;
+    color: var(--text-dark);
+    line-height: 1.6;
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+.app-container {
+    background-color: var(--background-light);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Space between sections */
+}
+
+header h1 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+    font-size: 2.2em;
+}
+
+header p {
+    color: #6c757d;
+    font-size: 1.1em;
+    margin-top: 0;
+}
+
+/* --- THE CRITICAL FIX IS HERE: Targeting .verse-card --- */
+.verse-card {
+    background-color: var(--card-background);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    min-height: 150px; /* Minimum height for shorter verses */
+    max-height: 250px; /* Maximum height, will cause scroll if exceeded */
+    overflow-y: auto; /* Adds vertical scrollbar if content overflows max-height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    text-align: center; /* Ensures text inside is centered */
+}
+
+#verseText {
+    font-size: 1.5em;
+    font-style: italic;
+    margin-bottom: 15px;
+    color: #555;
+    /* Ensure text within the fixed height container also wraps */
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+#verseReference {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between buttons */
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+button {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    flex-grow: 1; /* Allow buttons to grow and fill space */
+    max-width: 200px; /* Limit button width */
+}
+
+button:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+footer {
+    margin-top: 25px;
+    font-size: 0.9em;
+    color: #888;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .app-container {
+        padding: 20px;
+        margin: 15px;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    #verseText {
+        font-size: 1.2em;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-container {
+        border-radius: 0; /* More app-like on very small screens */
+        box-shadow: none;
+        padding: 15px;
+        min-height: 100vh; /* Fill entire screen */
+        justify-content: space-between; /* Push footer to bottom */
+    }
+
+    .controls {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center;
+    }
+
+    button {
+        width: 100%; /* Full width buttons */
+        max-width: none;
+    }
+}
